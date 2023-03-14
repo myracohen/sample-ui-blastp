@@ -3,7 +3,7 @@
     "authors": [
         "test"
     ],
-    "contact": "http://www.kbase.us/support/",
+    "contact": "test",
     "visible": true,
     "categories": ["active","sequence"],
     "widgets": {
@@ -113,7 +113,7 @@
         {
             "id": "bitscore",
             "optional": true,
-            "advanced": true,
+            "advanced": false,
             "allow_multiple": false,
             "default_values": [ "100" ],
             "field_type": "text",
@@ -138,7 +138,7 @@
         {
             "id": "overlap_fraction",
             "optional": true,
-            "advanced": true,
+            "advanced": false,
             "allow_multiple": false,
             "default_values": [ "50.0" ],
             "field_type": "text",
@@ -151,7 +151,7 @@
         {
             "id": "maxaccepts",
             "optional": true,
-            "advanced": true,
+            "advanced": false,
             "allow_multiple": false,
             "default_values": [ "1000" ],
             "field_type": "text",
@@ -163,7 +163,7 @@
         {
             "id": "write_off_code_prot_seq",
             "optional": true,
-            "advanced": true,
+            "advanced": false,
             "allow_multiple": false,
             "default_values": [ "1" ],
             "field_type": "dropdown",
@@ -187,7 +187,7 @@
         {
             "id": "output_extra_format",
             "optional": false,
-            "advanced": true,
+            "advanced": false,
             "allow_multiple": false,
             "default_values": [ "none" ],
             "field_type": "dropdown",
