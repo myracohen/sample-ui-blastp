@@ -76,5 +76,4 @@ parameters :
         short-hint : |
             Specify the format for an additional output file. Tab-delimited output is always generated as a default. This option is for one additional file. These options are described in the NCBI BLAST documentation.
 description : |
-  This method performs a protein-protein (protein sequence alignment) BLASTp Search using NCBI's BLAST (version 2.11.0).
-  BLASTp is a protein sequence search against a protein sequence database. The KBase implementation is restricted to searches of protein-coding genes in a Genome object, the Genome members of a GenomeSet or SpeciesTree, the genes in an Annotated Metagenome Assembly, or the features in a FeatureSet. The results of the search are displayed as a table, saved to a downloadable text file, and saved as a KBase FeatureSet object for later use.
+  This method performs a protein-protein (protein sequence alignment) BLASTp Search using NCBI's BLAST (version 2.11.0).ults of the search are displayed as a table, saved to a downloadable text file, and saved as a KBase FeatureSet object for later use.
