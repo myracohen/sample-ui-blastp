@@ -1,0 +1,350 @@
+{
+    "ver": "1.0.1",
+    "authors": [
+        "test-app"
+    ],
+    "contact": "http://www.kbase.us/support/",
+    "visible": true,
+    "categories": ["active","sequence"],
+    "widgets": {
+        "input": null,
+        "output": "no-display"
+    },
+    "parameters": [ 
+        {
+            "id": "input_one_sequence",
+            "optional": true,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [ "" ],
+            "field_type": "textarea",
+            "textarea_options" : {
+                 "n_rows" : 10
+            }
+        },
+        {
+            "id": "input_one_ref",
+            "optional": true,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [ "" ],
+            "field_type": "text",
+            "text_options": {
+                "valid_ws_types": [ "KBaseSequences.SequenceSet" ]
+            }
+        },
+        {
+            "id": "input_many_refs",
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": true,
+            "default_values": [ "" ],
+            "field_type": "text",
+            "text_options": {
+                "valid_ws_types": [ "KBaseCollections.FeatureSet","KBaseGenomes.Genome","KBaseSearch.GenomeSet","KBaseTrees.Tree","KBaseMetagenomes.AnnotatedMetagenomeAssembly" ]
+            }
+        },
+        {
+            "id": "genome_disp_name_config",
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [ "obj_name" ],
+            "field_type": "dropdown",
+            "dropdown_options": {
+                "options": [
+                                {
+                                        "value": "obj_name",
+                                        "display": "Object_Name",
+                                        "id": "genome_disp_name_config-obj_name",
+                                        "ui-name": "genome_disp_name_config-obj_name"
+                                },
+                                {
+                                        "value": "obj_name_ver",
+                                        "display": "Object_Name.version",
+                                        "id": "genome_disp_name_config-obj_name_ver",
+                                        "ui-name": "genome_disp_name_config-obj_name_ver"
+                                },
+                                {
+                                        "value": "sci_name",
+                                        "display": "Scientific Name",
+                                        "id": "genome_disp_name_config-sci_name",
+                                        "ui-name": "genome_disp_name_config-sci_name"
+                                },
+                                {
+                                        "value": "obj_name_sci_name",
+                                        "display": "Object_Name: Scientific Name",
+                                        "id": "genome_disp_name_config-obj_name_sci_name",
+                                        "ui-name": "genome_disp_name_config-obj_name_sci_name"
+                                },
+                                {
+                                        "value": "obj_name_ver_sci_name",
+                                        "display": "Object_Name.version: Scientific Name",
+                                        "id": "genome_disp_name_config-obj_name_ver_sci_name",
+                                        "ui-name": "genome_disp_name_config-obj_name_ver_sci_name"
+                                }
+                ]
+            }
+        },
+        {
+            "id": "output_filtered_name",
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [ "BLASTp_Search.FeatureSet" ],
+            "field_type": "text",
+            "text_options": {
+                "valid_ws_types": [ "KBaseCollections.FeatureSet" ],
+		"is_output_name": true		  
+            }
+        },
+        {
+            "id": "e_value",
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [ ".001" ],
+            "field_type": "text",
+            "text_options": {
+                "validate_as": "float",
+                "min_integer" : 0
+            }
+        },
+        {
+            "id": "bitscore",
+            "optional": true,
+            "advanced": true,
+            "allow_multiple": false,
+            "default_values": [ "100" ],
+            "field_type": "text",
+            "text_options": {
+                "validate_as": "float",
+                "min_integer" : 25
+            }
+        },
+        {
+            "id": "ident_thresh",
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [ "40.0" ],
+            "field_type": "text",
+            "text_options": {
+                "validate_as": "float",
+                "min_float" : 0.0,
+                "max_float" : 100.0
+            }
+        },
+        {
+            "id": "overlap_fraction",
+            "optional": true,
+            "advanced": true,
+            "allow_multiple": false,
+            "default_values": [ "50.0" ],
+            "field_type": "text",
+            "text_options": {
+                "validate_as": "float",
+                "min_float" : 0.0,
+                "max_float" : 100.0
+            }
+        },
+        {
+            "id": "maxaccepts",
+            "optional": true,
+            "advanced": true,
+            "allow_multiple": false,
+            "default_values": [ "1000" ],
+            "field_type": "text",
+            "text_options": {
+                "validate_as": "int",
+                "min_integer" : 1
+            }
+        },
+        {
+            "id": "write_off_code_prot_seq",
+            "optional": true,
+            "advanced": true,
+            "allow_multiple": false,
+            "default_values": [ "1" ],
+            "field_type": "dropdown",
+            "dropdown_options": {
+                "options": [
+                                {
+                                        "value": "0",
+                                        "display": "DON'T write off-genetic-code protein translation",
+                                        "id": "write_off_code_prot_seq-0",
+                                        "ui-name": "write_off_code_prot_seq-0"
+                                },
+                                {
+                                        "value": "1",
+                                        "display": "DO write off-genetic-code protein translation",
+                                        "id": "write_off_code_prot_seq-1",
+                                        "ui-name": "write_off_code_prot_seq-1"
+                                }
+                ]
+            }
+        },
+        {
+            "id": "output_extra_format",
+            "optional": false,
+            "advanced": true,
+            "allow_multiple": false,
+            "default_values": [ "none" ],
+            "field_type": "dropdown",
+            "dropdown_options": {
+	    	"options": [
+				{
+					"value": "none",
+					"display": "Only 7 (tabular with comment lines)",
+					"id": "none",
+					"ui-name": "none"
+				},
+				{
+					"value": "0",
+					"display": "0 (pairwise)",
+					"id": "0",
+					"ui-name": "0"
+				},
+				{
+					"value": "1",
+					"display": "1 (query-anchored showing identities)",
+					"id": "1",
+					"ui-name": "1"
+				},
+				{
+					"value": "2",
+					"display": "2 (query-anchored no identities)",
+					"id": "2",
+					"ui-name": "2"
+				},
+				{
+					"value": "3",
+					"display": "3 (flat query-anchored, show identities)",
+					"id": "3",
+					"ui-name": "3"
+				},
+				{
+					"value": "4",
+					"display": "4 (flat query-anchored, no identities)",
+					"id": "4",
+					"ui-name": "4"
+				},
+				{
+					"value": "5",
+					"display": "5 (XML Blast output)",
+					"id": "5",
+					"ui-name": "5"
+				},
+				{
+					"value": "8",
+					"display": "8 (Text ASN.1)",
+					"id": "8",
+					"ui-name": "8"
+				},
+				{
+					"value": "9",
+					"display": "9 (Binary ASN.1)",
+					"id": "9",
+					"ui-name": "9"
+				},
+				{
+					"value": "10",
+					"display": "10 (Comma-separated values)",
+					"id": "10",
+					"ui-name": "10"
+				},
+				{
+					"value": "11",
+					"display": "11 (BLAST archive format ASN.1)",
+					"id": "11",
+					"ui-name": "11"
+				}
+		]
+            }
+        }
+
+    ],
+    "behavior": {
+        "service-mapping": {
+            "url": "",
+            "name": "kb_blast",
+            "method": "BLASTp_Search",
+            "input_mapping": [
+                {
+                    "narrative_system_variable": "workspace",
+                    "target_property": "workspace_name"
+                },
+                {
+                    "input_parameter": "input_one_sequence",
+                    "target_property": "input_one_sequence"
+                },
+                {
+                    "input_parameter": "input_one_ref",
+                    "target_property": "input_one_ref",
+		    "target_type_transform": "resolved-ref"
+                },
+                {
+                    "input_parameter": "input_many_refs",
+                    "target_property": "input_many_refs",
+		    "target_type_transform": "list<resolved-ref>"
+                },
+                {
+                    "input_parameter": "genome_disp_name_config",
+                    "target_property": "genome_disp_name_config"
+                },
+                {
+                    "input_parameter": "output_filtered_name",
+                    "target_property": "output_filtered_name"
+                },
+                {
+                    "input_parameter": "e_value",
+                    "target_property": "e_value"
+                },
+                {
+                    "input_parameter": "bitscore",
+                    "target_property": "bitscore"
+                },
+                {
+                    "input_parameter": "ident_thresh",
+                    "target_property": "ident_thresh"
+                },
+                {
+                    "input_parameter": "overlap_fraction",
+                    "target_property": "overlap_fraction"
+                },
+                {
+                    "input_parameter": "maxaccepts",
+                    "target_property": "maxaccepts"
+                },
+                {
+                    "input_parameter": "write_off_code_prot_seq",
+                    "target_property": "write_off_code_prot_seq"
+                },
+                {
+                    "input_parameter": "output_extra_format",
+                    "target_property": "output_extra_format"
+                }
+            ],
+            "output_mapping": [
+                {
+                    "narrative_system_variable": "workspace",
+                    "target_property": "workspace_name"
+                },
+                {
+                    "service_method_output_path": [0, "report_name"],
+                    "target_property": "report_name"
+                },
+                {
+                    "service_method_output_path": [0, "report_ref"],
+                    "target_property": "report_ref"
+                },
+                {
+		    "constant_value": "16",
+                    "target_property": "report_window_line_height"
+                }
+            ]
+        }
+    },
+    "job_id_output_field": "docker"
+}
+
