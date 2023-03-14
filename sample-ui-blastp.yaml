@@ -3,12 +3,6 @@
 name: BLASTp prot-prot Search - v2.13.0+
 tooltip: |
     Search for protein matches to an input protein sequence.
-screenshots:
-
-    []
-
-icon: blast-cyan.png
-
 #
 # define a set of similar methods that might be useful to the user
 #
