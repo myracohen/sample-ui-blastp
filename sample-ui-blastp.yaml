@@ -12,12 +12,6 @@ suggestions:
             []
         next:
             []
-    methods:
-        related:
-            []
-        next:
-            ["kb_muscle.MUSCLE_prot"]
-
 #
 # Configure the display and description of parameters
 #
