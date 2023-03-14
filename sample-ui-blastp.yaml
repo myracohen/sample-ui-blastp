@@ -6,13 +6,8 @@ tooltip: |
 #
 # define a set of similar methods that might be useful to the user
 #
-suggestions:
-    apps:
-        related:
-            []
-        next:
-            []
-#
+
+  #
 # Configure the display and description of parameters
 #
 parameters :
