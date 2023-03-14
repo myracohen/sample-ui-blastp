@@ -3,7 +3,7 @@
     "authors": [
         "test-app"
     ],
-    "contact": "http://www.kbase.us/support/",
+    "contact": "test",
     "visible": true,
     "categories": ["active","sequence"],
     "widgets": {
