@@ -12,7 +12,7 @@ tooltip: |
 parameters :
     input_one_sequence:
         ui-name : |
-            Query Protein Sequence (optional)
+            Query Protein Sequence \(optional\)
         short-hint : |
             Must enter either a query protein sequence or an input query object. This is a single protein (amino acid) sequence to use for the search. The sequence entered here will be saved as a Query Object and must be named below.
         placeholder : |
@@ -43,7 +43,7 @@ parameters :
         ui-name : |
             Sequence Identity Threshold (%)
         short-hint : |
-            The minimum percent identity threshold for hits "(1-100)".
+            The minimum percent identity threshold for hits "\(1-100\)".
     e_value:
         ui-name : |
             E-value Threshold
